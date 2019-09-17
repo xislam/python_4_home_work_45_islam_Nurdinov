@@ -1,0 +1,38 @@
+[
+{
+  "model": "webapp.task",
+  "pk": 1,
+  "fields": {
+    "description": "\u0432\u0430\u0440\u044b\u0432\u0430\u043f",
+    "date": "2019-09-11",
+    "status": "in_progress"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 2,
+  "fields": {
+    "description": "dfgjaoklgnixfbad",
+    "date": "2019-09-12",
+    "status": "new"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$N4FDOjnuCuNA$mFTXE/SLEU+UGA/GJly936ptgi38QaDbYsT9QGyenhM=",
+    "last_login": "2019-09-06T07:32:45.456Z",
+    "is_superuser": true,
+    "username": "user",
+    "first_name": "",
+    "last_name": "",
+    "email": "nurdinovislam4@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-09-06T07:32:33.119Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

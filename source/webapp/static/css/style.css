@@ -1,0 +1,80 @@
+body {
+    background: lightcyan;
+    color: #222222;
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+
+}
+.navbar {
+    display: block;
+    background: #6a7dff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-size: 0;
+    box-sizing: border-box;
+    padding: 7px 30px;
+}
+.menu {
+    font-size: 14px;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    color: #fffee8;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 15px;
+}
+
+.menu a:hover {
+    color: #ffc122;
+    text-decoration: underline;
+}
+.pre {
+    white-space: pre-wrap;
+}
+
+label{
+    display: block;
+    width: 120px;
+}
+
+.form-error {
+
+    color: red;
+
+    font-size: 12px;
+
+    margin: 5px 0 0 0
+
+}
+
+
+
+.field-error {
+
+    border: solid 1px red;
+
+    box-shadow: red 0 0 3px;
+
+}

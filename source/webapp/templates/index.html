@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+    <li><a href="{% url 'task_add' %}">Add Task</a></li>
+{% endblock %}
+
+{% block content %}
+    <h1>Tasks:</h1>
+    <hr/>
+    {% for task in tasks %}
+        <h2>{{ task.description }}</h2>
+        <div>{{ task.date }}</div>
+        <p><input type="checkbox" name="{% url 'task_view' task.pk %}" value="task.pk" checked></p>
+        <p><a href="{% url 'task_view' task.pk %}">More...</a></p>
+        <p><a href="{% url 'task_update' task.pk %}">Edit</a></p>
+        <p><a href="{% url 'task_delete' task.pk %}">Delete</a></p>
+        <hr/>
+{#        <form method="POST" action="{% url "task_update" article.pk %}">#}
+{#            {% include 'partial/_form.html' with button_text="" %}#}
+{#        </form>#}
+    {% endfor %}
+
+{#    <p><a href="{% url 'task_delete' task.pk %}">Delete</a></p>#}
+{% endblock %}
