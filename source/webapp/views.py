@@ -88,16 +88,10 @@ def task_delete_view(request, pk):
         return redirect('index')
 
 
-# def task_delete_view(request, pk):
-#
-#     task = get_object_or_404(Task, pk=pk)
-#
-#     if request.method == 'GET':
-#
-#         return render(request, 'delete.html', context={'task': task})
-#
-#     elif request.method == 'POST':
-#
-#         task.delete()
-#
-#         return redirect('index')
+def task_delete_check_view(request):
+    if request.method == 'POST':
+        delete = request.POST.getlist('delete')
+        for check in delete:
+            task = get_object_or_404(Task, pk=check)
+            task.delete()
+        return redirect('index')

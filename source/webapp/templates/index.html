@@ -7,18 +7,17 @@
 {% block content %}
     <h1>Tasks:</h1>
     <hr/>
+    <form action="{% url 'tasks_delete' %}" method="post">
+    {% csrf_token %}
     {% for task in tasks %}
         <h2>{{ task.description }}</h2>
         <div>{{ task.date }}</div>
-        <p><input type="checkbox" name="{% url 'task_view' task.pk %}" value="task.pk" checked></p>
+        <input type="checkbox" name="delete" value="{{ task.pk }}">For delete<Br>
         <p><a href="{% url 'task_view' task.pk %}">More...</a></p>
         <p><a href="{% url 'task_update' task.pk %}">Edit</a></p>
         <p><a href="{% url 'task_delete' task.pk %}">Delete</a></p>
         <hr/>
-{#        <form method="POST" action="{% url "task_update" article.pk %}">#}
-{#            {% include 'partial/_form.html' with button_text="" %}#}
-{#        </form>#}
     {% endfor %}
-
-{#    <p><a href="{% url 'task_delete' task.pk %}">Delete</a></p>#}
+        <p><input type="submit" value="Delete"></p>
+</form>
 {% endblock %}
