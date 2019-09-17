@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block menu %}
+
+    <li><a href="{% url 'task_view' task.pk %}">View</a></li>
+
+{% endblock %}
+
+{% block title %}Update Task{% endblock %}
+
+{% block content %}
+
+    <h1>Update Task</h1>
+
+    <form method="POST" action="{% url "task_update" task.pk %}">
+
+        {% csrf_token %}
+  {% include 'partial/task_form.html' with button_text="Update" %}
+    </form>
+
+{% endblock %}
+
